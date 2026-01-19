@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from config import settings
 
-app = FastAPI()
+app = FastAPI(
+    title=settings.API_TITLE,
+    version=settings.API_VERSION
+)
 
 # app.add_middleware(
 #     CORSMiddleware,
@@ -14,5 +18,13 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     return {
-        "message": "Welecome to Calorie Tracker"
+        "message": "Calorie Tracker API",
+        "version": settings.API_VERSION,
+        "docs": "/docs"
+    }
+
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy"
     }
