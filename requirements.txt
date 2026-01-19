@@ -1,27 +1,27 @@
 # Core Framework
-fastapi
-uvicorn
-pydantic
-pydantic-settings
+fastapi==0.128.0
+uvicorn==0.40.0
+pydantic==2.12.5
+pydantic-settings==2.12.0
 
 # Database
-sqlalchemy
-alembic
-psycopg2-binary
+sqlalchemy==2.0.45
+alembic==1.18.1
+psycopg2-binary==2.9.11
 
 # AI/LangChain
-langchain
-langchain-openai
-openai
+langchain==1.2.6
+langchain-openai==1.1.7
+openai==2.15.0
 
 # Utilities
-python-dotenv
-python-multipart
+python-dotenv==1.2.1
+python-multipart==0.0.21
 
 # Redis
-redis
+redis==7.1.0
 
 # Testing
-pytest
-pytest-asyncio
-httpx
+pytest==9.0.2
+pytest-asyncio==1.3.0
+httpx==0.28.1
